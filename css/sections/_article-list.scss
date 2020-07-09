@@ -1,0 +1,14 @@
+// Article List
+
+.article-list {
+	margin: 32px 16px;
+	article {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.article-title {
+		line-height: 1.3em;
+	}
+}

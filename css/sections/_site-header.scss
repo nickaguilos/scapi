@@ -1,0 +1,41 @@
+// Site Head
+
+#site-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 40px;
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+
+		a {
+			text-transform: uppercase;
+			color: $dark-gray;
+			text-decoration: none;
+			display: inline-block;
+			padding-bottom: 10px;
+			font-weight: 500;
+			margin-left: 24px;
+			border-bottom: 2px solid #fff;
+
+			&:hover, &.active {
+				border-bottom: 2px solid $yellow;
+			}
+		}
+	}
+
+	@media screen and (max-width: $medium) {
+		display: block;
+		margin: 16px;
+
+		nav {
+			margin-top: 40px;
+
+			a {
+				margin: 0;
+			}
+		}
+	}
+}

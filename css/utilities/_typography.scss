@@ -1,0 +1,60 @@
+// Typographic Rules
+
+h1, .h1 {
+  font-size: 2.05555556em;
+  line-height: 1.24324324em;
+  margin-top: 0.62162162em;
+  margin-bottom: 1.24324324em;
+}
+h2, .h2 {
+  font-size: 1.61111111em;
+  line-height: 1.5862069em;
+  margin-top: 0.79310345em;
+  margin-bottom: 0.79310345em;
+}
+h3, .h3 {
+  font-size: 1.27777778em;
+  line-height: 1em;
+  margin-top: 1em;
+  margin-bottom: 0em;
+}
+h4, .h4 {
+  font-size: 1em;
+  line-height: 1.27777778em;
+  margin-top: 1.27777778em;
+  margin-bottom: 0em;
+}
+h5, .h5 {
+  font-size: 1em;
+  line-height: 1.27777778em;
+  margin-top: 1.27777778em;
+  margin-bottom: 0em;
+}
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0em;
+  margin-bottom: 1.27777778em;
+}
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+/* Let's make sure all's aligned */
+hr, .hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+a, b, i, strong, em, small, code {
+  line-height: 0;
+}
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
