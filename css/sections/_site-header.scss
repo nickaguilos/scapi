@@ -4,14 +4,13 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 40px;
+	padding: 40px;
 
 	nav {
 		display: flex;
 		justify-content: space-between;
 
 		a {
-			text-transform: uppercase;
 			color: $dark-gray;
 			text-decoration: none;
 			display: inline-block;

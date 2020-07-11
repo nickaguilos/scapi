@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 html, .root {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 23px;
 }
 
@@ -14,5 +14,18 @@ body {
 	font-size: 1em;
 	line-height: 1.27777778em;
 	background-color: #fff;
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	color: $dark-gray;
+	text-decoration: none;
+
+	&:hover {
+		color: #888;
+	}
 }
 

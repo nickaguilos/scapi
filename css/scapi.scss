@@ -7,10 +7,13 @@
 @import 'css/utilities/variables',
 		'css/utilities/base',
 		'css/utilities/grid',
-		'css/utilities/typography';
+		'css/utilities/buttons',
+		'css/utilities/typography',
+		'css/utilities/elements';
 
 // Sections
 @import 'css/sections/site-header',
+		'css/sections/site-footer',
 		'css/sections/article-list';
 
 // Pages 

@@ -3,5 +3,25 @@
 .container {
 	margin: 0 auto;
 	min-width: $x-small;
-	max-width: $large;
+	max-width: $x-large;
+
+	&.narrow-width {
+		max-width: $large;
+	}
+}
+
+.grid-wrapper {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 1em;
+
+	.main-col {
+		grid-column-start: 1;
+		grid-column-end: 8;
+	}
+
+	.side-col {
+		grid-column-start: 8;
+		grid-column-end: 12;
+	}
 }
