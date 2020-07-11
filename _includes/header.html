@@ -1,0 +1,21 @@
+<header class="site-header fixed-width-container" role="banner">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    <a class="logo" rel="author" href="{{ "/" }}">
+        <img src="{{ '/assets/logos/scapi-tricolor-horizontal.svg' | relative_url }}" alt="">
+    </a>
+
+    <nav class="site-nav">
+        <div>
+            <a href="{{ "/" | relative_url }}">Home</a>
+            <a href="/updates">Updates</a>
+            <a href="/crags">Crags</a>
+            <a href="/calendar">Calendar</a>
+            <a href="/about">About</a>
+        </div>
+        <div class="social">
+            <a href="https://instagram.com/sendmagazine">Instagram</a>
+            <a href="https://facebook.com/sendmagazine">Facebook</a>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,36 @@
+// About Page
+
+#about {
+	h2 {
+		@extend h3;
+		margin: 0;
+	}
+
+	.faces {
+		display: flex;
+		padding-top: 3em;
+		article {
+			display: flex;
+			align-items: center;
+			margin-right: 1.5em;
+
+			img {
+				display: block;
+				width: 100px;
+				height: 100px;
+				border-radius: 100px;
+				margin-right: 1em;
+			}
+		}
+	}
+
+	@media screen and (max-width: $small-device) {
+		.faces {
+			flex-direction: column;
+
+			article {
+				padding-bottom: 2rem;
+			}
+		}
+	}
+}

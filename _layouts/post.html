@@ -1,0 +1,67 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    {% if page.higher-hero %}
+    <img src="{{ page.higher-hero }}" alt="higher-hero-image" class="hero-image">
+    {% endif %}
+
+    <header  
+        {% if page.background-hero %} class="post-header with-background"style="background-image: url('{{ page.background-hero }}')" 
+        {% else %}
+            class="post-header"
+        {% endif %}>
+        <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+
+        <div class="post-meta subtext">
+            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            {{ page.date | date: date_format }}
+            </time>
+            
+            {%- if page.author -%}
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+            {%- endif -%}
+
+            {%- if page.photographer -%}
+            <br>
+            <span>Photos by: {{page.photographer}} </span>
+            {%- endif -%}
+        </div>
+    </header>
+    
+    {% if page.lower-hero %}
+    <img src="{{ page.lower-hero }}" alt="lower-hero-image" class="hero-image">
+    {% endif %}
+
+    <div id="{{ page.identifier }}" class="post-content e-content" itemprop="articleBody">
+        {{ content }}
+
+        {% include share.html %}
+    </div>
+
+    {% if page.next.url %}
+    <div id="related-post">
+        <div class="inner-wrapper">
+            <h2 class="section-heading">You May Like</h2>
+            <a href="{{ page.next.url }}">
+                <div>
+                    <h3>{{ page.next.title }}</h3>
+                    <p>
+                        {{ page.next.description }}
+                    </p>
+
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+    {% endif %}
+
+    {%- if site.disqus.shortname -%}
+        {%- include disqus_comments.html -%}
+    {%- endif -%}
+
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

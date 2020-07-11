@@ -1,0 +1,29 @@
+.archive {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	padding: 1em;
+	
+	& > * {
+		grid-column: 3/10;
+	}
+
+	h2 {
+		margin-bottom: 0
+	}
+
+	@media screen and (max-width: $small-device) {
+		& > * {
+			grid-column: 1/12;
+		}
+
+		.date-author {
+			margin-top: 5px;
+			font-size: 14px;
+		}
+
+		p {
+			margin: 0.5em 0;
+		}
+	}
+
+}

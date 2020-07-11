@@ -1,0 +1,33 @@
+// Directory Styles
+
+.directory {
+	padding: 1rem; 
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+
+	& > * {
+		grid-column: 3/10;
+	}
+	
+	article {
+		margin: 1rem 0;
+	}
+	h2 {
+		font-size: 1.2rem;
+		margin: 0;
+	}
+
+	.rates {
+		margin-top: 1rem;
+		span {
+			display: inline-block;
+			margin-right: 3rem;
+		}
+	}
+
+	@media screen and (max-width: $small-device) {
+		& > * {
+			grid-column: 1/12;
+		}
+	}
+}

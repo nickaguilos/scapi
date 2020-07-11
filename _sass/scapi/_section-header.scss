@@ -1,0 +1,41 @@
+// Site Header Styles
+
+.site-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2em 0;
+
+	.logo {
+		img { 
+			width: 200px;
+			background-color: transparent;
+		}
+	}
+
+	.site-nav {
+		display: flex;
+		justify-content: space-between;
+
+		a {
+			padding: 1rem;
+			font-weight: bold;
+		}
+	}
+
+	.site-title {
+		flex-basis: auto;
+	}
+
+	.social {
+		margin-left: 3rem;
+	}
+
+	@media screen and (max-width: 500px) {
+		flex-direction: column;
+
+		.social {
+			display: none;
+		}
+	}
+}

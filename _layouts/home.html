@@ -1,0 +1,167 @@
+---
+layout: default
+---
+
+<div class="home">
+    <!-- Hero -->
+    <div id="hero">
+        <h1>The Sport Climbing Association of the Philippines, Inc.</h1>
+        <div>
+            <p>
+                SCAPI is the national governing body of the sport of competition and outdoor climbing in the Philippines. As a non-profit, we promote three competition disciplines, bouldering, sport and speed climbing, through our series, as well as outdoor development projects around the country
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa placeat esse veritatis mollitia aliquid accusamus dolore praesentium a pariatur quos molestiae dicta repellendus voluptate distinctio, adipisci neque doloribus impedit ut blanditiis! Veritatis repellat tempore perspiciatis ipsum aspernatur optio odit! Ab repellendus veritatis, consequatur quo perferendis expedita asperiores adipisci enim nisi.
+            </p>
+
+            <a href="/about" class="button">Learn More About SCAPI</a>
+        </div>
+    </div>
+
+
+    <!-- Support Articles -->
+    <div class="second-row-posts post-list">
+        <hr>
+        <h2 class="section-heading">Latest Updates</h2>
+        
+        <div class="article-wrapper flex-wrapper">
+            {% for post in site.tags.other-articles limit:2 %}
+            <div class="article">
+                <div class="flex-wrapper inner-wrapper">
+                    <div class="img-wrapper">
+                        {% if post.image %}
+                        <a href="{{ post.url | relative_url }}">
+                            <img src="{{ post.image }}" alt="">
+                        </a>
+                        {% endif %}
+                    </div>
+                    <div class="content">
+                        <h3>
+                            <a class="post-link" href="{{ post.url | relative_url }}">
+                                {{ post.title | escape }}
+                            </a>
+                        </h3>
+                        <div class="date-author">
+                            <span class="author">{{ post.author }}</span> &middot;
+                            <span class="post-meta">{{ post.date | date_to_long_string }}</span>
+                        </div>
+                        
+                        <p>
+                            {{ post.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="second-row-posts post-list">
+        <div class="article-wrapper flex-wrapper">
+            {% for post in site.tags.other-articles limit:2 offset:2 %}
+            <div class="article">
+                <div class="flex-wrapper inner-wrapper">
+                    <div class="img-wrapper">
+                        {% if post.image %}
+                        <a href="{{ post.url | relative_url }}">
+                            <img src="{{ post.image }}" alt="">
+                        </a>
+                        {% endif %}
+                    </div>
+                    <div class="content">
+                        <h3>
+                            <a class="post-link" href="{{ post.url | relative_url }}">
+                                {{ post.title | escape }}
+                            </a>
+                        </h3>
+                        <div class="date-author">
+                            <span class="author">{{ post.author }}</span> &middot;
+                            <span class="post-meta">{{ post.date | date_to_long_string }}</span>
+                        </div>
+                        
+                        <p>
+                            {{ post.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- End Support Articles --> 
+
+    <!-- Featured Photo Post -->
+    {% for post in site.tags.photo-feature %}
+    <section class="featured-photo">
+        <div class="content">
+            <h2 class="section-heading">Featured Photo Story</h2>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <div class="date-author">
+                <span class="author">{{ post.author }}</span> &middot;
+                <span class="post-meta">{{ post.date | date_to_long_string }}</span>
+            </div>
+            <p>
+                {{ post.description }}
+            </p>
+        </div>
+
+        <div class="img-row">
+            <a href="{{ post.url | relative_url }}">
+                <img src="assets/images/issue-2/l4l/1.jpg" alt="Lust for lime cover image">
+            </a>
+
+            <a href="{{ post.url | relative_url }}">
+                <img src="assets/images/issue-2/l4l/2.jpg" alt="Lust for lime cover image">
+            </a>
+        </div>
+
+        <a href="{{ post.url | relative_url }}" class="button">
+            View Photo Story
+        </a>
+    </section>
+    {% endfor %}
+
+
+    <!-- Support Articles -->
+    <div class="third-row-posts post-list">
+        <div class="article-wrapper grid-wrapper">            
+            {% for post in site.tags.other-articles offset:4 %}
+            <div class="article">
+                <div class="flex-wrapper inner-wrapper">
+                    <!-- <div class="img-wrapper">
+                        {% if post.image %}
+                        <a href="{{ post.url | relative_url }}">
+                            <img src="{{ post.image }}" alt="">
+                        </a>
+                        {% endif %}
+                    </div> -->
+                    <div class="content">
+                        <h3>
+                            <a class="post-link" href="{{ post.url | relative_url }}">
+                                {{ post.title | escape }}
+                            </a>
+                        </h3>
+                        <div class="date-author">
+                            <span class="author">{{ post.author }}</span> &middot;
+                            <span class="post-meta">{{ post.date | date_to_long_string }}</span>
+                        </div>
+                        
+                        <p>
+                            {{ post.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <hr>
+    </div>
+    <!-- End Support Articles -->
+
+    {%- include ad.html -%}
+</div>
+
+<div class="more-loader">
+    <a href="archive.html" class="button">More Articles</a>
+</div>

@@ -1,0 +1,31 @@
+// Site Footer Styles
+
+#site-footer {
+	display: flex;
+	justify-content: space-between;
+
+	border-top: 1px solid $border-color;
+	padding: 1rem;
+	padding-bottom: 2rem;
+	font-size: 14px;
+
+	a {
+		display: inline-block;
+		padding-right: 20px;
+	}
+
+	@media screen and (max-width: $small-device) {
+		& {
+			flex-direction: column;
+			padding: 1rem;
+			text-align: center;
+		}
+
+		span {
+			display: block;
+			margin-top: 1em;
+			order: 1;
+			opacity: 0.5;
+		}
+	}
+}

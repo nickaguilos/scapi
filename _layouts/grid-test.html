@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grid Test</title>
+
+	<style>
+		:root {
+			--primary: #ddd;
+			--dark: #333;
+			--light: #fff;
+			--shadow: 0 1px 5px rgba(104,104,104,0.8);
+		}
+
+		html {
+			box-sizing: border-box;
+			font-family: sans-serif;
+			color: var(--dark);
+		}
+
+		body {
+			background: #ccc;
+			margin: 50px;
+			line-height: 1.4;
+		}
+
+		.btn {
+			background: var(--dark);
+			color: var(--light);
+			padding: 0.6rem 1.3rem;
+			text-decoration: none;
+			border: 0;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		.wrapper {
+			display: grid;
+			grid-gap: 20px;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		/* Navigation */
+		.main-nav ul {
+			display: grid;
+			grid-gap: 20px;
+			padding: 0;
+			list-style: none;
+
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		.main-nav a {
+			background: var(--primary);
+			display: block;
+			text-decoration: none;
+			padding: 0.8rem;
+			text-align: center;
+			color: var(--dark);
+			text-transform: uppercase;
+			font-size: 1.1rem;
+			box-shadow: var(--shadow);
+		}
+
+		/* Top Container */
+		.top-container {
+			display: grid;
+			grid-gap: 20px;
+			grid-template-areas: 
+				'showcase showcase top-box-a'
+				'showcase showcase top-box-b'
+		}
+
+		.showcase {
+			grid-area: showcase;
+			min-height: 400px;
+			background: white;
+			padding: 3rem;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			justify-content: center;
+			box-shadow: var(--shadow);
+		}
+
+		.showcase h1 {
+			font-size: 4rem;
+			margin-bottom: 0;
+			color: var(--dark);
+		}
+
+		/* Top Box */
+
+		.top-box-a {
+			grid-area: top-box-a;
+			background: var(--primary);
+			padding: 1.5rem;
+			display: grid;
+			align-items: center;
+			justify-items: center;
+		}
+
+		.top-box-b {
+			grid-area: top-box-b;
+			background: var(--primary);
+			padding: 1.5rem;
+			display: grid;
+			align-items: center;
+			justify-items: center;
+		}
+
+		/* Boxes */
+
+		.boxes {
+			display: grid;
+			grid-gap: 20px;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		}
+
+		.box {
+			background: var(--primary);
+			text-align: center;
+			padding: 1.5rem 2rem;
+			box-shadow: var(--shadow);
+		}
+
+		.info {
+			background: var(--primary);
+			box-shadow: var(--shadow);
+			display: grid;
+			grid-gap: 30px;
+			grid-template-columns: repeat(2, 1fr);
+			padding: 3rem;
+		}
+
+		.portfolio {
+			display: grid;
+			grid-gap: 20px;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		}
+
+		.portfolio img {
+			width: 100%;
+		}
+
+		footer {
+			margin-top: 2rem;
+			background: var(--dark);
+			color: var(--light);
+			text-align: center;
+		}
+
+		/* Media Queries */
+		@media (max-width: 700px) {
+			.top-container {
+				grid-template-areas:
+					'showcase showcase'
+					'top-box-a top-box-b';
+			}
+
+			.main-nav ul, .info {
+				grid-template-columns: 1fr;
+			}
+
+			.info .btn {
+				display: block;
+			}
+		}
+
+		@media (max-width: 500px) {
+			.top-container {
+				grid-template-areas: 
+				'showcase'
+				'top-box-a'
+				'top-box-b';
+			}
+
+			body {
+				margin: 1rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- Nav -->
+		<nav class="main-nav">
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">About</a></li>
+				<li><a href="">Services</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- Top Container -->
+		<section class="top-container">
+			<header class="showcase">
+				<h1>Your Web Presence</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero error, iusto minus at. Numquam, ducimus!
+				</p>
+
+				<a href="#" class="btn">Read More</a>
+			</header>
+
+			<div class="top-box top-box-a">
+				<h4>Membership</h4>
+				<p class="price">P199/mo</p>
+				<a href="" class="btn">Buy Now</a>
+			</div>
+
+			<div class="top-box top-box-b">
+				<h4>Pro Membership</h4>
+				<p class="price">P299/mo</p>
+				<a href="" class="btn">Buy Now</a>
+			</div>
+		</section>
+
+		<!-- Boxes Section -->
+		<section class="boxes">
+			<div class="box">
+				<h3>Analytics</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, accusantium!</p>
+			</div>
+
+			<div class="box">
+				<h3>Marketing</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, accusantium!</p>
+			</div>
+
+			<div class="box">
+				<h3>Development</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, accusantium!</p>
+			</div>
+
+			<div class="box">
+				<h3>Support</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, accusantium!</p>
+			</div>
+		</section>
+
+		<!-- Info Section -->
+		<section class="info">
+			<img src="http://placehold.it/1024x768" alt="">
+			<div>
+				<h2>Your Business On The Web</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque error ut similique nam atque porro pariatur impedit, provident! Rem sequi quia voluptate tenetur ullam asperiores, sed omnis quibusdam ea id.
+				</p>
+
+				<a href="" class="btn">Learn More</a>
+			</div>
+		</section>
+
+		<!-- Portfolio Section -->
+		<section class="portfolio">
+			<img src="https://source.unsplash.com/random/200x200" alt="">
+			<img src="https://source.unsplash.com/random/201x200" alt="">
+			<img src="https://source.unsplash.com/random/202x200" alt="">
+			<img src="https://source.unsplash.com/random/203x200" alt="">
+			<img src="https://source.unsplash.com/random/204x200" alt="">
+			<img src="https://source.unsplash.com/random/205x200" alt="">
+			<img src="https://source.unsplash.com/random/206x200" alt="">
+			<img src="https://source.unsplash.com/random/207x200" alt="">
+			<img src="https://source.unsplash.com/random/208x200" alt="">
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ad necessitatibus recusandae blanditiis inventore deleniti dolore quia reiciendis quam quidem eligendi, eveniet. Quas distinctio repellendus impedit voluptate suscipit commodi eum.</p>
+		</footer>
+	</div>
+	<!-- Wrapper End -->
+</body>
+</html>

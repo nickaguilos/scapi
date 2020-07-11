@@ -1,0 +1,53 @@
+
+// Import from TypeKit
+
+$base-font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+$copy-font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+$article-font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+
+
+// Brand Colors
+$yellow: #f8c246;
+$blue: #236588;
+$red: #ed3f56;
+
+$base-color: #1a1a1a;
+$font-color: #111;
+$hover-color: #444;
+$border-color: #ddd;
+$dark-border-color: #222;
+$highlight-color: #e66b72;
+$light-gray: #fafafa;
+
+// Breakpoints 
+$xsmall-device: 320px;
+$small-device: 600px;
+$medium-device: 700px;
+$large-device: 1000px;
+$xlarge-device: 1400px;
+
+
+@import 
+	'scapi/base',
+	'scapi/utility-typography',
+ 	'scapi/section-header',
+ 	'scapi/section-footer',
+ 	'scapi/page-home',
+ 	'scapi/page-post',
+ 	'scapi/page-about',
+ 	'scapi/page-archive',
+    'scapi/page-directory';
+
+
+@media screen and (min-width: $xsmall-device) {
+  	// html {
+   //  	font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  	// }
+}
+
+@media screen and (min-width: $large-device) {
+  	// html {
+   //  	font-size: 16px;
+  	// }
+}
+
