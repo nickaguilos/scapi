@@ -4,4 +4,4 @@ title: Tech Log
 permalink: tech-log
 ---
 
-Running on Jekyll
+July 9 - Ported Send Mag over to repo as baseline for design and content
